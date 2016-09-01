@@ -51,6 +51,9 @@
     <ClCompile Include="Program\ProgramManager.cpp">
       <Filter>Source Files\Program</Filter>
     </ClCompile>
+    <ClCompile Include="Entity\TransformEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene\Scene.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Program\ProgramManager.h">
       <Filter>Header Files\Program</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\TransformEntity.h">
+      <Filter>Header Files\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

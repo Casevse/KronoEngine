@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Entity\Entity.cpp" />
+    <ClCompile Include="Entity\TransformEntity.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Program\Program.cpp" />
     <ClCompile Include="Program\ProgramManager.cpp" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity\Entity.h" />
+    <ClInclude Include="Entity\TransformEntity.h" />
     <ClInclude Include="Program\Program.h" />
     <ClInclude Include="Program\ProgramManager.h" />
     <ClInclude Include="Scene\Scene.h" />
