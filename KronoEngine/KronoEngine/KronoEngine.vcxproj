@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Entity\CameraEntity.cpp" />
     <ClCompile Include="Entity\Entity.cpp" />
     <ClCompile Include="Entity\TransformEntity.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="Scene\SceneNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entity\CameraEntity.h" />
     <ClInclude Include="Entity\Entity.h" />
     <ClInclude Include="Entity\TransformEntity.h" />
     <ClInclude Include="Program\Program.h" />
