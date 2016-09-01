@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Entity">
       <UniqueIdentifier>{6f49f491-9053-4b53-8355-d6dc24dfdb4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Program">
+      <UniqueIdentifier>{7f500a76-3718-45fa-af6e-a2e1740cdfd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Program">
+      <UniqueIdentifier>{19f3fba2-9e64-435f-97f1-16057b73e561}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -39,6 +45,12 @@
     <ClCompile Include="Scene\SceneNode.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Program\Program.cpp">
+      <Filter>Source Files\Program</Filter>
+    </ClCompile>
+    <ClCompile Include="Program\ProgramManager.cpp">
+      <Filter>Source Files\Program</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene\Scene.h">
@@ -49,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="Scene\SceneNode.h">
       <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Program\Program.h">
+      <Filter>Header Files\Program</Filter>
+    </ClInclude>
+    <ClInclude Include="Program\ProgramManager.h">
+      <Filter>Header Files\Program</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

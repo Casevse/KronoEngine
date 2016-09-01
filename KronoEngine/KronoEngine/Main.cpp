@@ -1,4 +1,5 @@
 
+#include <GL\glew.h>
 #include <GLFW\glfw3.h>
 
 int main(void) {
@@ -16,6 +17,13 @@ int main(void) {
 	}
 
 	glfwMakeContextCurrent(mWindow);
+
+	GLenum error = glewInit();
+
+	if (error != GLEW_OK) {
+		glfwTerminate();
+		return -1;
+	}
 
 	while (!glfwWindowShouldClose(mWindow)) {
 		glClear(GL_COLOR_BUFFER_BIT);
