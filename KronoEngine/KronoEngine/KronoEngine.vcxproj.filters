@@ -57,6 +57,12 @@
     <ClCompile Include="Entity\CameraEntity.cpp">
       <Filter>Source Files\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="Entity\MeshEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\LightEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene\Scene.h">
@@ -78,6 +84,12 @@
       <Filter>Header Files\Entity</Filter>
     </ClInclude>
     <ClInclude Include="Entity\CameraEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\MeshEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\LightEntity.h">
       <Filter>Header Files\Entity</Filter>
     </ClInclude>
   </ItemGroup>
