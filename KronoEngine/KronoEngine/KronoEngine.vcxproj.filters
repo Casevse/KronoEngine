@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Program">
       <UniqueIdentifier>{19f3fba2-9e64-435f-97f1-16057b73e561}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Resource">
+      <UniqueIdentifier>{848da287-77f9-49d9-a49a-6a5be5a3576c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource">
+      <UniqueIdentifier>{1f7d0aef-4136-4158-9b0f-e67b1f494d4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -63,6 +69,21 @@
     <ClCompile Include="Entity\LightEntity.cpp">
       <Filter>Source Files\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="Entity\ParticleEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Resource.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\ResourceManager.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\MeshResource.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\TextureResource.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene\Scene.h">
@@ -91,6 +112,21 @@
     </ClInclude>
     <ClInclude Include="Entity\LightEntity.h">
       <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\ParticleEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Resource.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\ResourceManager.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\MeshResource.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\TextureResource.h">
+      <Filter>Header Files\Resource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
