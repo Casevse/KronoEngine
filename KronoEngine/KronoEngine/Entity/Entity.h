@@ -36,6 +36,10 @@ protected:
 	glm::vec4		mVertices[8];
 	bool			mStatic;
 
+	glm::vec4		mCenter;
+	float			mRadius;
+	glm::vec4		mVertice;
+
 	bool			CheckFrustumCulling(const glm::mat4 &model, const bool moved, const bool frameChanged);
 
 private:
