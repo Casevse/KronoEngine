@@ -3,6 +3,7 @@
 #include <glm\gtc\matrix_transform.hpp>
 #include <glm\gtc\constants.hpp>
 #include <glm\gtc\random.hpp>
+#include <GLFW\glfw3.h>
 
 ParticleEntity::ParticleEntity(const float size, const float lifetime, const glm::vec2 &velocityRange, const glm::vec3 &acceleration,
 	const int numberOfParticles, const float width, const float dispersion, char *path, ProgramManager *programManager, ResourceManager *resourceManager)
@@ -52,8 +53,7 @@ bool ParticleEntity::BeginDraw(std::stack<glm::mat4> &matrixStack, std::stack<bo
 			mProgram->Use();
 
 			mProgram->SetUniform(mUniform_MVP, mProgramManager->GetActiveCameraProjection() * mProgramManager->GetActiveCameraView() * matrixStack.top());
-			// TODO method to get the time.
-			//mProgram->SetUniform(mUniform_Time, (float)Graphics::Singleton()->GetTime() / 1000.0f);
+			mProgram->SetUniform(mUniform_Time, (float)glfwGetTime());
 
 			mProgram->SetUniform(mUniform_ParticleLifetime, mLifetime);
 			mProgram->SetUniform(mUniform_Acceleration, mAcceleration);

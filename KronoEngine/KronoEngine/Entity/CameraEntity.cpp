@@ -2,6 +2,7 @@
 
 #include <glm\gtc\constants.hpp>
 #include <glm\gtc\matrix_transform.hpp>
+#include <Config.h>
 
 CameraEntity::CameraEntity() :
 	mPosition(0.0f, 0.0f, 1.0f),
@@ -10,7 +11,7 @@ CameraEntity::CameraEntity() :
 	mFieldOfView(glm::degrees(glm::pi<float>() / 2.5f)),
 	mNearPlane(0.01f),
 	mFarPlane(300.0f),
-	mViewportAspectRatio(800.0f / 600.0f)
+	mViewportAspectRatio(Config::width / Config::height)
 {
 	SetType(ENTITY_CAMERA);
 }
@@ -27,7 +28,7 @@ void CameraEntity::EndDraw(std::stack<glm::mat4> &matrixStack, std::stack<bool> 
 
 }
 
-void CameraEntity::SetPostion(const glm::vec3 &position) {
+void CameraEntity::SetPosition(const glm::vec3 &position) {
 	mPosition = position;
 	LookAt(mTarget);
 }

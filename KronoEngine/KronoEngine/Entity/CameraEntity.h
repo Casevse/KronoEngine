@@ -11,7 +11,7 @@ public:
 	bool				BeginDraw(std::stack<glm::mat4> &matrixStack, std::stack<bool> &movedStack, bool shadowMap);
 	void				EndDraw(std::stack<glm::mat4> &matrixStack, std::stack<bool> &movedStack);
 
-	void				SetPostion(const glm::vec3 &position);
+	void				SetPosition(const glm::vec3 &position);
 	const glm::vec3		&GetPosition() const;
 
 	void				SetOffsetPosition(const glm::vec3 &offset);

@@ -1,6 +1,7 @@
 
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+#include <Config.h>
 
 int main(void) {
 	GLFWwindow* mWindow;
@@ -9,7 +10,7 @@ int main(void) {
 		return -1;
 	}
 
-	mWindow = glfwCreateWindow(800, 600, "KronoEngine", NULL, NULL);
+	mWindow = glfwCreateWindow(Config::width, Config::height, "KronoEngine", NULL, NULL);
 
 	if (!mWindow) {
 		glfwTerminate();
