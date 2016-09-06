@@ -134,8 +134,6 @@ glm::vec4 *ProgramManager::GetFrustumPlanes() {
 void ProgramManager::InitPrograms() {
 	Program *program;
 
-	// TODO path of the shaders.
-
 	// ToonMesh (with/without texture)
 	program = new Program();
 	program->CompileShader("../Media/Shaders/ToonMesh.vs", GLSLShader::VERTEX);

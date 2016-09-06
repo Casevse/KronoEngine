@@ -1,6 +1,7 @@
 #include <Resource\MeshResource.h>
 
 #include <fstream>
+#include <Config.h>
 
 MeshResource::MeshResource(char *path, ProgramManager *programManager) {
 	mPath = path;
@@ -76,9 +77,7 @@ void MeshResource::Draw(const glm::mat4 &model, const glm::mat4 &modelView, cons
 	mProgramMesh->SetUniform(mUniformMesh_NormalMatrix, normalMatrix);
 	mProgramMesh->SetUniform(mUniformMesh_MVP, modelViewProjection);
 
-	bool shadows = true;	// TODO check from configuration properties.
-
-	if (shadows) {
+	if (Config::shadows) {
 		mProgramMesh->SetUniform(mUniformMesh_HasShadowMap, 1.0f);
 		mProgramMesh->SetUniform(mUniformMesh_ShadowMatrix, mProgramManager->GetGlobalLightVPB() * model);
 		mProgramMesh->SetUniform(mUniformMesh_ShadowMap, 1);

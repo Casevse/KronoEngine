@@ -69,6 +69,9 @@ void Renderer::Draw() {
 	mScene->Draw();
 
 	glfwSwapBuffers(mWindow);
+
+	// TODO
+	glfwPollEvents();
 }
 
 void Renderer::Clear() {
@@ -113,7 +116,6 @@ Node *Renderer::AddCube(const glm::vec3 &position, const glm::vec3 &scale, const
 		transformNode = mScene->CreateNode(transform, NULL);
 	}
 
-	// TODO write the correct path
 	MeshEntity *cube = mScene->CreateMesh("../Media/Meshes/Primitives/cube.km");
 	SceneNode *sceneNode = mScene->CreateNode(cube, transformNode);
 
@@ -140,7 +142,6 @@ Node *Renderer::AddSphere(const glm::vec3 &position, const glm::vec3 &scale, con
 		transformNode = mScene->CreateNode(transform, NULL);
 	}
 
-	// TODO write the correct path
 	MeshEntity *sphere = mScene->CreateMesh("../Media/Meshes/Primitives/sphere.km");
 	SceneNode *sceneNode = mScene->CreateNode(sphere, transformNode);
 
@@ -251,7 +252,6 @@ Node *Renderer::AddPlane(const glm::vec3 &position, const int sizeX, const int s
 		transformNode = mScene->CreateNode(transform, NULL);
 	}
 
-	// TODO write the correct path
 	MeshEntity *plane = mScene->CreateMesh("../Media/Meshes/Primitives/plane.km");
 
 	SceneNode *sceneNode = mScene->CreateNode(plane, transformNode);
