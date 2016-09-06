@@ -7,6 +7,7 @@ class TextureResource : public Resource {
 public:
 
 				TextureResource(char *path, bool flipped = false);
+				TextureResource(char *path, unsigned char *pixels, int width, int height);
 				~TextureResource();
 
 	void		LoadTexture(char *path);

@@ -54,7 +54,7 @@ void Renderer::SetTitle(const char *title) {
 }
 
 void Renderer::Close() {
-	delete mWindow;
+	glfwDestroyWindow(mWindow);
 	delete mScene;
 	delete mResourceManager;
 	delete mProgramManager;
@@ -289,7 +289,7 @@ Node *Renderer::AddParticle(const glm::vec3 &position, const float size, const f
 }
 
 void Renderer::SetActiveCamera(Node *camera) {
-	mScene->SetActiveCamera(camera->GetSceneNode);
+	mScene->SetActiveCamera(camera->GetSceneNode());
 }
 
 void Renderer::SetLightsVisible(const bool visible) {

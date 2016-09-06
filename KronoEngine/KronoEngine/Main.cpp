@@ -1,40 +1,17 @@
-
-#include <GL\glew.h>
-#include <GLFW\glfw3.h>
 #include <Config.h>
+#include <Renderer.h>
 
 int main(void) {
-	GLFWwindow* mWindow;
+	Renderer renderer;
 
-	if (!glfwInit()) {
-		return -1;
+	renderer.Init(Config::width, Config::height, Config::fullscreen, "KronoEngine");
+
+	while (renderer.IsRunning()) {
+		renderer.BeginFrame();
+		renderer.Draw();
 	}
 
-	mWindow = glfwCreateWindow(Config::width, Config::height, "KronoEngine", NULL, NULL);
-
-	if (!mWindow) {
-		glfwTerminate();
-		return -1;
-	}
-
-	glfwMakeContextCurrent(mWindow);
-
-	GLenum error = glewInit();
-
-	if (error != GLEW_OK) {
-		glfwTerminate();
-		return -1;
-	}
-
-	while (!glfwWindowShouldClose(mWindow)) {
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		glfwSwapBuffers(mWindow);
-
-		glfwPollEvents();
-	}
-
-	glfwTerminate();
+	renderer.Close();
 
 	return 0;
 }

@@ -6,6 +6,34 @@ TextureResource::TextureResource(char *path, bool flipped) {
 	// TODO load from image using some library.
 }
 
+TextureResource::TextureResource(char *path, unsigned char *pixels, int width, int height) {
+	mPath = path;
+
+	mMinMagFilter = GL_LINEAR;
+	mWrapMode = GL_CLAMP_TO_EDGE;
+
+	glActiveTexture(GL_TEXTURE0);
+	glGenTextures(1, &mTextureObject);
+	glBindTexture(GL_TEXTURE_2D, mTextureObject);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, mMinMagFilter);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, mMinMagFilter);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, mWrapMode);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, mWrapMode);
+
+	glTexImage2D(GL_TEXTURE_2D,
+		0,
+		GL_RGBA,
+		(GLsizei)width,
+		(GLsizei)height,
+		0,
+		GL_RGBA,
+		GL_UNSIGNED_BYTE,
+		pixels);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+}
+
 TextureResource::~TextureResource() {
 	glDeleteTextures(1, &mTextureObject);
 }

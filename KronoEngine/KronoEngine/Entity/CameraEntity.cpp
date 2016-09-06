@@ -11,7 +11,7 @@ CameraEntity::CameraEntity() :
 	mFieldOfView(glm::degrees(glm::pi<float>() / 2.5f)),
 	mNearPlane(0.01f),
 	mFarPlane(300.0f),
-	mViewportAspectRatio(Config::width / Config::height)
+	mViewportAspectRatio((float)Config::width / (float)Config::height)
 {
 	SetType(ENTITY_CAMERA);
 }
