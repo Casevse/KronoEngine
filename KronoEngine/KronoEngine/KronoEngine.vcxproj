@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\External\include\lodepng\lodepng.cpp" />
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="Entity\CameraEntity.cpp" />
     <ClCompile Include="Entity\Entity.cpp" />
