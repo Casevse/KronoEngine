@@ -137,6 +137,7 @@
     <ClCompile Include="Entity\ParticleEntity.cpp" />
     <ClCompile Include="Entity\TransformEntity.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="Program\Program.cpp" />
     <ClCompile Include="Program\ProgramManager.cpp" />
     <ClCompile Include="Renderer.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="Entity\MeshEntity.h" />
     <ClInclude Include="Entity\ParticleEntity.h" />
     <ClInclude Include="Entity\TransformEntity.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Program\Program.h" />
     <ClInclude Include="Program\ProgramManager.h" />
     <ClInclude Include="Renderer.h" />
