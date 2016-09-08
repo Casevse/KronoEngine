@@ -25,7 +25,7 @@ void ConfigureScene() {
 	cube = renderer.AddCube(glm::vec3(2.0f, 0.5f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), glm::ivec4(255, 255, 255, 255));
 	cube->SetTexture("../Media/Textures/Test/Dice.png");
 	
-	light = renderer.AddLight(glm::vec3(-2.0f, 2.0f, 2.0f), glm::ivec4(0, 255, 0, 255), 0.5f , 0.5f, 0.5f);
+	light = renderer.AddLight(glm::vec3(-2.0f, 1.0f, 2.0f), glm::ivec4(0, 255, 0, 255), 0.5f , 0.5f, 0.5f);
 	
 	mesh = renderer.AddMesh("../Media/Meshes/Kedi/kedi-static.km", glm::vec3(0.0f, 0.5f, 0.0f));
 	mesh->SetTexture("../Media/Textures/Kedi/kedi-texture.png");
